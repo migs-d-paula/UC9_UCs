@@ -2,6 +2,7 @@
 string[,] matriz = new string[5, 3];
 int op, l, c;
 
+
 //DANDO VALOR AS VARIÁVEIS
 op = 0;
 l = 0;
@@ -40,6 +41,17 @@ switch (op)
                 }
             }
         }
+
+    break;
+
+    //INFORMAÇÕES
+    case 2:
+        
+        Console.Clear();
+        Console.WriteLine("para saber quantas FALTAS vc pode ter clique ENTER");
+        Console.ReadLine();
+
+        Console.Clear();
 
     break;
 }
