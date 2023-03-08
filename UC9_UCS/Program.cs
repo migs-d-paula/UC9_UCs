@@ -1,10 +1,10 @@
 ﻿//CRIANDO AS VARÁVEIS
 string[,] matriz = new string[5, 4];
-int op, l, c, uc;
-double duracao;
-
+int op, l, c, uc, porcentagem;
+double duracao, tempo, dias, horas;
 
 //DANDO VALOR AS VARIÁVEIS
+porcentagem = 0;
 duracao = 0;
 uc = 0;
 op = 0;
@@ -77,11 +77,17 @@ switch (op)
         Console.WriteLine("Qual a duração de aula diária?");
         duracao = double.Parse(Console.ReadLine());
 
-        Console.WriteLine();
+        Console.WriteLine("qual a porcentagem de FALTAS vc pode der nessa UC?");
+        porcentagem = int.Parse(Console.ReadLine());
 
-        
+        horas = double.Parse(matriz[uc, 3]);
+        tempo = (porcentagem * horas) / 100;
+        dias = tempo / duracao;
 
         Console.Clear();
+
+        Console.WriteLine("Voce pode faltar " + tempo + " HORAS nessa UC");
+        Console.WriteLine("Voce pode faltar " + dias + " DIAS nessa UC");
 
     break;
 }
